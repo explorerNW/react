@@ -1,11 +1,12 @@
 import { lazy } from "react";
 import React, { Suspense } from "react";
+import { Link } from "react-router-dom";
 
 import logo from "./logo.svg";
 import "./App.css";
-import { ComponentA } from "./components";
+import { Button } from "reactstrap";
 
-const ComponentB = lazy(() => import("./components/component-b"));
+const ComponCentC = lazy(() => import("./components/componant-c"));
 class Temp extends React.Component {
   clickHandler(e: any) {
     console.log(e);
@@ -28,10 +29,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <ComponentA />
         <Temp></Temp>
+        <Link to={"/a"}>
+          <Button>Component-a</Button>
+        </Link>
         <Suspense fallback={<div>loading...</div>}>
-          <ComponentB></ComponentB>
+          <ComponCentC></ComponCentC>
         </Suspense>
       </header>
     </div>
