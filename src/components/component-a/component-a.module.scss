@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+  .error {
+    color: red;
+  }
+}
