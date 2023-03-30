@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## over https
+
+#### Windows (cmd.exe)
+```
+set HTTPS=true&&yarn start
+```
+
+#### Windows (Powershell)
+```
+($env:HTTPS = "true") -and (npm start)
+```
+
+#### Linux, macOS (Bash)
+```
+HTTPS=true yarn start
+```
+### Custom SSL certificate
+
+#### Linux, macOS (Bash)
+HTTPS=true SSL_CRT_FILE=cert.crt SSL_KEY_FILE=cert.key yarn start
+
